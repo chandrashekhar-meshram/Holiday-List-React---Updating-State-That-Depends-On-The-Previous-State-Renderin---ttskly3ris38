@@ -39,16 +39,16 @@ class App extends Component {
 
   render() {
     
-    var indianLocations = this.cityList.filter((item, index) => {
-      console.log(indianLocations);
+    var indianLocations = this.cityList.filter((item, index) => {     
       return item.country === "India";
+       //console.log(indianLocations);
     });
 
     return (
       <div id="main">
         <ol>
           {indianLocations.map((item, index) => (
-            <li key={`location${index + 1}`}>{item.name}</li>
+            <li key={`location${index}`}>{item.name}</li>
           ))}
         </ol>
       </div>
